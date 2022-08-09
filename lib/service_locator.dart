@@ -7,6 +7,7 @@ GetIt locator = GetIt.instance;
 
 /// static method to setup service and viewmodels
 void setupLocator() {
-  locator.registerLazySingleton(WidgetbookApi.new);
-  locator.registerFactory(HomeViewModel.new);
+  locator
+    ..registerLazySingleton(WidgetbookApi.new)
+    ..registerFactory(HomeViewModel.new);
 }

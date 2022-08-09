@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'name_dialog.dart';
+
 /// Default value for all paddings in this screen
 const double defaultPadding = 20;
 
@@ -9,7 +11,6 @@ const double h2 = 20;
 const double h3 = 15;
 
 class HomePage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,8 +31,8 @@ class HomePage extends StatelessWidget {
               padding: const EdgeInsets.all(defaultPadding),
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: const BorderRadius.all(
-                    Radius.circular(defaultPadding / 2)),
+                borderRadius:
+                    const BorderRadius.all(Radius.circular(defaultPadding / 2)),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.grey.withOpacity(0.5),
@@ -43,18 +44,17 @@ class HomePage extends StatelessWidget {
               ),
               child: const Text(
                 'Are you ready to get out of the matrix ? '
-                    'Take your time to make your decision, '
-                    'because there is no coming back. '
-                    '\n\nWhen you are ready, please tap on the Start button.',
+                'Take your time to make your decision, '
+                'because there is no coming back. '
+                '\n\nWhen you are ready, please tap on the Start button.',
                 textAlign: TextAlign.start,
               ),
             ),
             ElevatedButton(
               onPressed: () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('I love you ❤️'),
-                  ),
+                showDialog<void>(
+                  context: context,
+                  builder: (_) => NameDialog(),
                 );
               },
               child: const Text('Start'),

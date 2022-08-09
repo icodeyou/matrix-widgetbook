@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
-class NameDialog extends StatefulWidget {
-  @override
-  State<NameDialog> createState() => _NameDialogState();
-}
+/// AlertDialog that can be showed to save the name.
+/// This class has to be used in the `showDialog()` method.
+class NameDialog extends StatelessWidget {
+  /// Creates a new instance of [NameDialog].
+  NameDialog({Key? key}) : super(key: key);
 
-class _NameDialogState extends State<NameDialog> {
+  /// Ke that is used for the short name form
   final _formKey = GlobalKey<FormState>();
 
   @override

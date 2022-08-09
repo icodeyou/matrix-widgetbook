@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'name_dialog.dart';
+import 'package:widgetbook_challenge/ui/name_dialog.dart';
 
 /// Default value for all paddings in this screen
 const double defaultPadding = 20;
@@ -10,7 +9,12 @@ const double h1 = 30;
 const double h2 = 20;
 const double h3 = 15;
 
+/// Main Code for the Home Page
 class HomePage extends StatelessWidget {
+
+  /// Creates a new instance of [HomePage].
+  const HomePage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:widgetbook_challenge/service_locator.dart';
 import 'package:widgetbook_challenge/ui/name_dialog.dart';
+import 'package:widgetbook_challenge/viewmodels/home_viewmodel.dart';
 
 /// Default value for all paddings in this screen
 const double defaultPadding = 20;
@@ -13,7 +15,10 @@ const double h3 = 15;
 class HomePage extends StatelessWidget {
 
   /// Creates a new instance of [HomePage].
-  const HomePage({Key? key}) : super(key: key);
+  HomePage({Key? key}) : super(key: key);
+
+  /// HomeViewModel, fetched by GetIt
+  final HomeViewModel model = locator<HomeViewModel>();
 
   @override
   Widget build(BuildContext context) {
